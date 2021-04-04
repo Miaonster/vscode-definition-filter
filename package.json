@@ -3,6 +3,7 @@
 	"displayName": "TSX Arrow Function Go To Definition",
 	"description": "",
 	"version": "0.0.1",
+	"publisher": "miaonster",
 	"engines": {
 		"vscode": "^1.55.0"
 	},
