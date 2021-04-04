@@ -4,7 +4,7 @@
   "description": "",
   "version": "0.0.1",
   "publisher": "miaonster",
-  "icon": "https://raw.githubusercontent.com/Miaonster/vscode-tsx-arrow-definition/master/document/arrow.png",
+  "icon": "images/arrow.png",
   "bugs": {
     "url": "https://github.com/Miaonster/vscode-tsx-arrow-definition/issues",
     "email": "miaonster17@gmail.com"
