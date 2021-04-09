@@ -1,8 +1,8 @@
 {
   "name": "vscode-tsx-arrow-definition",
-  "displayName": "TSX Arrow Function Go To Definition",
+  "displayName": "TSX Definition Filter",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "miaonster",
   "icon": "images/arrow.png",
   "bugs": {
@@ -26,9 +26,31 @@
   "contributes": {
     "typescriptServerPlugins": [
       {
-        "name": "typescript-react-go-to-definition-plugin"
+        "name": "typescript-react-go-to-definition-plugin",
+        "enableForWorkspaceTypeScriptVersions": true
       }
-    ]
+    ],
+    "configuration": {
+      "title": "TSX Definition Filter",
+      "properties": {
+        "tsxDefinitionFilter.remove": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "If mulitple definitions exist and one of the definitions matches the glob pattern, remove that definiton."
+        },
+        "tsxDefinitionFilter.forceRemove": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "If one of the definitions matches the glob pattern, remove that definiton."
+        }
+      }
+    }
   },
   "main": "./out/extension.js",
   "scripts": {
@@ -53,6 +75,6 @@
     "vscode-test": "^1.5.0"
   },
   "dependencies": {
-    "typescript-react-go-to-definition-plugin": "^1.0.1"
+    "typescript-react-go-to-definition-plugin": "1.2.0"
   }
 }

@@ -1,4 +1,4 @@
-TSX Arrow Function Go To Definition
+TSX Definition Filter
 ===
 
 <small>VSCode marketplace unique identifier: `vscode-tsx-arrow-definition`</small>
@@ -6,6 +6,8 @@ TSX Arrow Function Go To Definition
 ## Feature
 
 * Remove react definition of arrow function
+* Remove user-specified definitions if there're mulitple
+* Remove any user-specified definition
 
 ## Before
 
