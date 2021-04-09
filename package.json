@@ -1,7 +1,7 @@
 {
   "name": "vscode-tsx-arrow-definition",
   "displayName": "TSX Definition Filter",
-  "description": "",
+  "description": "Filter any user-specified typescript definition.",
   "version": "0.1.0",
   "publisher": "miaonster",
   "icon": "images/arrow.png",
