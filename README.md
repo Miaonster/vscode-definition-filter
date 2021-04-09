@@ -28,6 +28,18 @@ or search extension marketplace:
 vscode-tsx-arrow-definition
 ```
 
+## Configuration
+
+* `remove`
+  * Default: `["**/node_modules/@types/react/index.d.ts"]`
+  * Type: Array of glob pattern, see [minimatch](https://github.com/isaacs/minimatch) for more details
+  * Description: If mulitple definitions exist and one of the definitions matches the glob pattern, remove that definiton.
+
+* `forceRemove`
+  * Default: `[]`
+  * Type: Array of glob pattern, see [minimatch](https://github.com/isaacs/minimatch) for more details
+  * Description: If one of the definitions matches the glob pattern, remove that definiton.
+
 ## Motivation
 
 Due to this [issue](https://github.com/microsoft/TypeScript/issues/37816), Cmd+click of JSX component will show 2 definitions. One of the definition is `FunctionComponent` of react. This behavior is not desired. So let's remove that definition, just remain the correct one.
