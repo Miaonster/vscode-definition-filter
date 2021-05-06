@@ -32,13 +32,39 @@ vscode-tsx-arrow-definition
 
 * `remove`
   * Default: `["**/node_modules/@types/react/index.d.ts"]`
-  * Type: Array of glob pattern, see [minimatch](https://github.com/isaacs/minimatch) for more details
-  * Description: If mulitple definitions exist and one of the definitions matches the glob pattern, remove that definiton.
+  * Type: Array of `Rule`
+  * Description: If mulitple definitions exist and one of the definitions matches any `Rule`, remove that definiton.
 
 * `forceRemove`
   * Default: `[]`
-  * Type: Array of glob pattern, see [minimatch](https://github.com/isaacs/minimatch) for more details
-  * Description: If one of the definitions matches the glob pattern, remove that definiton.
+  * Type: Array of `Rule`
+  * Description: If one of the definitions matches any `Rule`, remove that definiton.
+
+### Rule
+
+Rule is a string of glob pattern or `{ file, definition }`
+
+* `file` is a string of glob pattern which matches the file path you're coding
+* `definition` is a string of glob pattern which matches the paht of deifnition file.
+
+And see [minimatch](https://github.com/isaacs/minimatch) for more details of glob pattern.
+
+### Example
+
+```json
+// settings.json
+{
+  "tsxDefinitionFilter.remove": [
+    "**/node_modules/**/*",
+  ],
+  "tsxDefinitionFilter.forceRemove": [
+    {
+      "file": "**/src/**/*",
+      "definition": "**/*.scss.d.ts",
+    }
+  ]
+}
+```
 
 ## Motivation
 

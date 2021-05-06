@@ -2,7 +2,7 @@
   "name": "vscode-tsx-arrow-definition",
   "displayName": "TSX Definition Filter",
   "description": "Filter any user-specified typescript definition.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "miaonster",
   "icon": "images/arrow.png",
   "bugs": {
@@ -36,7 +36,21 @@
         "tsxDefinitionFilter.remove": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": [
+              "string",
+              "object"
+            ],
+            "title": "Rule",
+            "properties": {
+              "file": {
+                "type": "string",
+                "description": "a string of glob pattern which matches the file path you're coding"
+              },
+              "definition": {
+                "type": "string",
+                "description": "a string of glob pattern which matches the file path you're coding"
+              }
+            }
           },
           "default": [],
           "description": "If mulitple definitions exist and one of the definitions matches the glob pattern, remove that definiton."
@@ -44,7 +58,21 @@
         "tsxDefinitionFilter.forceRemove": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": [
+              "string",
+              "object"
+            ],
+            "title": "Rule",
+            "properties": {
+              "file": {
+                "type": "string",
+                "description": "a string of glob pattern which matches the file path you're coding"
+              },
+              "definition": {
+                "type": "string",
+                "description": "a string of glob pattern which matches the file path you're coding"
+              }
+            }
           },
           "default": [],
           "description": "If one of the definitions matches the glob pattern, remove that definiton."
@@ -75,6 +103,6 @@
     "vscode-test": "^1.5.0"
   },
   "dependencies": {
-    "typescript-react-go-to-definition-plugin": "1.2.0"
+    "typescript-react-go-to-definition-plugin": "1.3.0"
   }
 }
